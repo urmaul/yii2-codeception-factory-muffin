@@ -8,7 +8,7 @@ use League\FactoryMuffin\Facade as FactoryMuffin;
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
 
-class CodeceptionModule extends ParentModule
+class CodeceptionModule extends \Codeception\Module
 {
     /**
      * @var Factory FactoryMuffin instance.
