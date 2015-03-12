@@ -8,17 +8,12 @@ use League\FactoryMuffin\Facade as FactoryMuffin;
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
 
-class CodeceptionModule extends \Codeception\Module
+class CodeceptionModule extends ParentModule
 {
     /**
      * @var Factory FactoryMuffin instance.
      */
     protected $factory;
-    
-    /**
-     * @var boolean true if you want to delete saved models after test.
-     */
-    protected $doDeleteSaved = true;
     
     public function _initialize()
     {
@@ -55,9 +50,8 @@ class CodeceptionModule extends \Codeception\Module
         return $this->factory->instance($model, $attr);
     }
     
-    public function _after(\Codeception\TestCase $test)
+    public function deleteSaved()
     {
-        if ($this->doDeleteSaved)
-            $this->factory->deleteSaved();
+        $this->factory->deleteSaved();
     }
 }
