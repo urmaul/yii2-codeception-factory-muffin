@@ -1,0 +1,23 @@
+{
+    "name": "urmaul/yii2-codeception-factory-muffin",
+    "type": "library",
+    "description": "Yii2 wrapper for Codeception+FactoryMuffin.",
+    "keywords": ["yii2", "codeception", "FactoryMuffin", "tests"],
+    "homepage": "https://github.com/urmaul/yii2-codeception-factory-muffin",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Bogdan Kolbik"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2-codeception": "~2.0.3",
+        "league/factory-muffin": "~2.0"
+    },
+	"autoload": {
+        "psr-4": {
+            "urmaul\\yii2\\FactoryMuffin": "src/"
+        }
+    }
+}
